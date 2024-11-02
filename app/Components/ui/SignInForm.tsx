@@ -23,7 +23,6 @@ const SignInForm = () => {
         <>
         <div className='flex mt-7 md:pl-10 justify-center'>
 
-            {/**Estate logo image */}
             <div className='hidden md:block md:w-full lg:ml-16'>
             <EstateLogo/>
             </div>
@@ -55,7 +54,7 @@ const SignInForm = () => {
                         <hr className="flex-grow border-gray-500" />
                     </div>
                     <SocialLoginButtons/>
-                    <h6 className='text-xs text-gray-500 font-medium w-full flex justify-center mt-16'>Don't have any account?<span className='text-blue-800 pl-1' onClick={(e)=> router.push('/Auth/Signup')}>Register</span></h6>
+                    <h6 className='text-xs text-gray-500 font-medium w-full flex justify-center mt-16'>Don&apos;t have any account?<span className='text-blue-800 pl-1' onClick={()=> router.push('/Auth/Signup')}>Register</span></h6>
                 </form>
             </div>
         </div>    

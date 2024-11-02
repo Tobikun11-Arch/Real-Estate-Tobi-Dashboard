@@ -1,11 +1,7 @@
-import Image from "next/image";
+import SignInForm from './Auth/SignIn/page'
 
 export default function Home() {
   //this is stage branch
 
-  return (
-    <>
-      <h1>Home Page</h1>
-    </>
-  );
+  return <SignInForm />
 }

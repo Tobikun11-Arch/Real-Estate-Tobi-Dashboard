@@ -7,10 +7,11 @@ interface InputProps {
     id?: string
     value?: string
     defaultChecked?: boolean
+    placeholder?: string
 }
 
-const Input = ({ className, onChange, type, id, value, defaultChecked }: InputProps) => {
-    return <input type={type} className={className} onChange={onChange} id={id} value={value} defaultChecked={defaultChecked}/>
+const Input = ({ className, onChange, type, id, value, defaultChecked, placeholder }: InputProps) => {
+    return <input type={type} className={className} onChange={onChange} id={id} value={value} placeholder={placeholder} defaultChecked={defaultChecked}/>
 
 }
 

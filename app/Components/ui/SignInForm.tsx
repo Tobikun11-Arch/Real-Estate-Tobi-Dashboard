@@ -40,9 +40,7 @@ const SignInForm = () => {
                     <label className='text-sm font-medium'>Email</label>
                     <Input className={`${inputClassName} mb-3`} placeholder='Input Dashboard-Email'
                     onChange={(e: React.ChangeEvent<HTMLInputElement>)=> setEmail(e.target.value)} value={Email}/>
-
                     <label className='text-sm font-medium'>Password</label>
-
                     <div className="relative w-full">
                     <Input type={isVisible ? 'text' : 'password'} className={`${inputClassName} pr-8`} placeholder='Input Dashboard-Password'
                     onChange={(e: React.ChangeEvent<HTMLInputElement>)=> setPassword(e.target.value)} value={Password}/>

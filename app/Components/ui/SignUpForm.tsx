@@ -48,7 +48,6 @@ const SignUpForm = () => {
                     <label className='text-sm font-medium'>Email</label>
                     <Input className={`${inputClassName} mb-3`} placeholder='Input Email'
                     onChange={(e: React.ChangeEvent<HTMLInputElement>)=> setEmail(e.target.value)} value={Email}/>  
-
                     <label className='text-sm font-medium'>Password</label>
                     <div className="relative w-full">
                         <Input type={isVisible ? 'text' : 'password'} className={`${inputClassName} pr-8`} placeholder='Input Dashboard-Password'
@@ -68,7 +67,6 @@ const SignUpForm = () => {
                     </div>
 
                     <Button className='bg-blue-600 font-bold w-full mt-5 text-white text-sm py-2 rounded-md'>Search</Button>
-
                     <h6 className='text-xs text-gray-500 font-medium w-full flex justify-center mt-16'>Already have an account?<span className='text-blue-800 pl-1' onClick={()=> router.push('/')}>Login</span></h6>
                 </form>
             </div>

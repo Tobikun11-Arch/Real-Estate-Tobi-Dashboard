@@ -56,7 +56,7 @@ const SignInForm = () => {
                             <Input type="checkbox" defaultChecked className="checkbox border w-4 h-4 border-gray-400 rounded-none [--chkbg:theme(colors.indigo.600)] [--chkfg:white]"></Input>
                             <p className='text-xs text-gray-900 font-medium'>Remember me</p>
                         </div>
-                        <p className='text-gray-400 text-xs font-semibold'>Forgot Password?</p>
+                        <p className='text-gray-400 text-xs font-semibold' onClick={()=> router.push('/Auth/forgot-password')}>Forgot Password?</p>
                     </div>
                     <Button type='submit' className='w-full bg-purple-800 py-2 rounded-md text-white text-sm font-bold mt-5'>Login</Button>
                     <div className="flex items-center mt-12">

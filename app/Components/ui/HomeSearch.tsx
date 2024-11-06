@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Building, CalendarDays, MapPin } from 'lucide-react';
-import { Button, Select } from './common/index';
+import { Button, Select } from '../common/index';
 
 const HomeSearch = () => {
     const [isVisible, setIsVisible] = useState(true);

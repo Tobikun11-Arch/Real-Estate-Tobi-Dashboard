@@ -3,10 +3,12 @@ import { Input, Button } from '../common/index'
 import SocialLoginButtons from './SocialLognButton';
 import EstateLogo from './EstateLogo';
 import { useRouter } from 'next/navigation';
+import { EyeOff, Eye } from 'lucide-react'
 
 const SignInForm = () => {
     const [ Email, setEmail ] = useState<string>('Dashboard-Email')
     const [ Password, setPassword ] = useState<string>('Dashboard-Password')
+    const [ isVisible, setVisible ] = useState<boolean>(false)
     const router = useRouter()
 
     const handleSubmit = (e: React.FormEvent) => {
@@ -17,12 +19,15 @@ const SignInForm = () => {
         }
     };
 
+    const togglePasswordVisibility = () => {
+        setVisible((prevState: boolean) => !prevState);
+    };
+
     const inputClassName = 'w-full border rounded-md h-9 border-gray-900 outline-none pl-2 text-black text-xs font-medium';
 
     return (
         <>
         <div className='flex mt-7 md:pl-10 justify-center'>
-
             <div className='hidden md:block md:w-full lg:ml-16'>
             <EstateLogo/>
             </div>
@@ -34,11 +39,19 @@ const SignInForm = () => {
                 <form onSubmit={handleSubmit} className='text-gray-400 mt-8'>
                     <label className='text-sm font-medium'>Email</label>
                     <Input className={`${inputClassName} mb-3`} placeholder='Input Dashboard-Email'
-                    onChange={(e)=> setEmail(e.target.value)} value={Email}/>
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>)=> setEmail(e.target.value)} value={Email}/>
 
                     <label className='text-sm font-medium'>Password</label>
-                    <Input className={inputClassName} placeholder='Input Dashboard-Password'
-                    onChange={(e)=> setPassword(e.target.value)} value={Password}/>
+
+                    <div className="relative w-full">
+                    <Input type={isVisible ? 'text' : 'password'} className={`${inputClassName} pr-8`} placeholder='Input Dashboard-Password'
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>)=> setPassword(e.target.value)} value={Password}/>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-3">
+                        <button type="button" onClick={togglePasswordVisibility}>
+                            {isVisible ? <Eye size={18} color='gray' /> : <EyeOff size={18} color='gray'/>}
+                        </button>
+                    </div>
+                    </div>
 
                     <div className="flex justify-between items-center mt-3">
                         <div className="flex gap-1 items-center">

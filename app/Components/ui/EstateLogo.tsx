@@ -1,10 +1,9 @@
 import React from 'react'
-import HomeSearch from '../HomeSearch'
+import HomeSearch from './HomeSearch'
 
 const EstateLogo = () => {
     return (
             <>
-                {/**fix this later, get the link from cloudinary*/}
                 <div className='flex items-end'>
                     <div className="lg:w-96 w-80 h-[500px] bg-[url('/EstateLogo.png')] bg-cover bg-no-repeat"></div>
                     <HomeSearch/>

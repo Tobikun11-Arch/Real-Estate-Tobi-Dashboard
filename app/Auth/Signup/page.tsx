@@ -1,11 +1,8 @@
+import SignUp from '@/app/Components/SignUp'
 import React from 'react'
 
 const Page = () => {
-  return (
-    <div>
-      <h1>Sign Up</h1>
-    </div>
-  )
+  return <SignUp/>
 }
 
 export default Page

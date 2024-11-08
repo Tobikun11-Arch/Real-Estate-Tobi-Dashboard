@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 
 const SignUpForm = () => {
     const inputClassName = 'w-full border rounded-md h-9 border-gray-900 outline-none pl-2 text-black text-xs font-medium'
-    const { Fullname, setFullname, Country, setCountry, Email, setEmail, Password, setPassword } = useUserData()
+    const { Fullname, setFullname, Email, setEmail, Password, setPassword } = useUserData()
     const [ isVisible, setVisible ] = useState<boolean>(false)
     const router = useRouter()
 

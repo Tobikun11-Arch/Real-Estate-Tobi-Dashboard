@@ -1,21 +1,20 @@
 import React from 'react'
-import { Bell } from 'lucide-react';
+import { Bell, Menu } from 'lucide-react';
 import Image from 'next/image';
 
 const Header = () => {
     return (
-        <div className='p-5 flex justify-between'>
-            <h1 className='font-bold text-blue-700 z-50'>SEWO</h1>
-            <div className='flex gap-1 items-center'>
-                <Bell strokeWidth={3} size={20} fill='black'/>
+        <div className='p-4 flex justify-between items-center'>
+            <h1 className='font-bold text-blue-700 z-50 text-2xl hidden md:block'>SEWO</h1>
+            <Menu className='md:hidden' color='black'/>
+            <div className='flex gap-2 items-center'>
+                <Bell strokeWidth={3} size={23} fill='black' color='black'/>
                 <Image
-                    width={10}
-                    height={10}
-                    src={'/profile.png'}
-                    alt={`image 1`}
-                    className=""
-                    placeholder = 'blur' // "empty" | "blur" | "data:image/..."
-                    blurDataURL='add new url later'
+                    priority
+                    width={35}
+                    height={35}
+                    src='/profile.png'
+                    alt={`profile user`}
                 />
             </div>
         </div>

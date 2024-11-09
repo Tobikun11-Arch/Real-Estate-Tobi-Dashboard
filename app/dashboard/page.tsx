@@ -1,11 +1,8 @@
 import React from 'react'
+import MainHome from './components/pages/MainHome'
 
 const Page = () => {
-    return (
-        <div>
-            <h1>Dashboard</h1>
-        </div>
-    )
+    return <MainHome/>
 }
 
 export default Page

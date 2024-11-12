@@ -1,5 +1,7 @@
 import SignInForm from './Auth/SignIn/page'
 
-export default function Home() {
+const Page = () => {
   return <SignInForm />
 }
+
+export default Page
